@@ -95,6 +95,7 @@ python train.py -s 42 --output results --cv_folds 5 --geno ./data/rice299_geno2.
 ### Predicting with the trained model
 ```c
 python predict.py  --output results  --geno "./data/rice299_geno2.txt"  --model ./results/fine_tuned_model_PH.h5
+##  for "--geno", a new genotype file should be used, here just an example.
 ```
 As a result, 1 files will be outputed by predict.py program, 
 - **prediction_res.csv**, The predictive values with known genotype.
