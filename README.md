@@ -3,7 +3,7 @@
 TrGP is a novel and effective strategy to improve genomic prediction (GP) performance based on transfer learning. Two main functions were designed in this approach, including train.py and predict.py, respectively. Three processes were applied for training, including pretraining, fine-tuning and building fusion models. TrGP aims to get knowledge from the source task's learning system to improve the target GP task.  
 
 
-### Environment
+## Environment
 This package was builded with the followed packages:
 ```c
 python 3.9
