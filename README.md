@@ -1,6 +1,6 @@
 # TrGP:A transfer learning based approach to improve genomic prediction in crop
 
-TrGP is a novel strategy to improve genomic prediction (GP) performance based on transfer learning.  TrGP aims to get knowledge from the source task's learning system to improve the target GP task.  Two main functions were designed in this approach, including train.py and predict.py, respectively. Three processes were applied by "train.py" function, including pretraining, fine-tuning and building fusion model. The "predict.py" function  is used to predict genomic estimated breeding values (GEBVs) for new accessions.
+TrGP is a novel strategy to improve genomic prediction (GP) performance based on transfer learning.  TrGP aims to get knowledge from the source task's learning system to improve the target GP task.  Two main functions were designed in this approach, including "train.py" and "predict.py", respectively. Three processes were applied by "train.py" function, including pretraining, fine-tuning and building fusion model. The "predict.py" function  is used to predict genomic estimated breeding values (GEBVs) for new accessions.
 
 ----------------------------------------
 ## Environment
