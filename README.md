@@ -1,6 +1,6 @@
 # TrGP:A transfer learning based approach to improve genomic prediction in crop
 
-TrGP is a novel strategy to improve genomic prediction (GP) performance based on transfer learning.  TrGP aims to get knowledge from the source task's learning system to improve the target GP task.  Two main functions were designed in this approach, including train.py and predict.py, respectively. Three processes were applied for train.py function, including pretraining, fine-tuning and building fusion models. The predict.py function  is used to predict genomic estimated breeding values (GWBVs) for new accessions.
+TrGP is a novel strategy to improve genomic prediction (GP) performance based on transfer learning.  TrGP aims to get knowledge from the source task's learning system to improve the target GP task.  Two main functions were designed in this approach, including train.py and predict.py, respectively. Three processes were applied by "train.py" function, including pretraining, fine-tuning and building fusion model. The "predict.py" function  is used to predict genomic estimated breeding values (GEBVs) for new accessions.
 
 ----------------------------------------
 ## Environment
@@ -15,7 +15,7 @@ numpy  1.24.2
 ```
 ## Data format
 ### genotype
-- The genotype file need to contain all makers in a *.txt file, including m accessions and n makers. 
+- The genotype file need to contain all makers in a "*.txt" file, including m accessions and n makers. 
 
 |            | makers |   |   |     |
 |:--:|:--:|:--:|:--:|:--:|
@@ -24,7 +24,7 @@ numpy  1.24.2
 |            | -1     | 1 | 0 | -1  |
 
 ### phenotype
-- The phenotype file need to contain mutiple traits in a *.csv file, and the header is the trait's name. 
+- The phenotype file need to contain mutiple traits in a "*.csv" file, and the header is the trait's name. 
 
 
 
