@@ -27,8 +27,9 @@ numpy  1.24.2
 - The phenotype file need to contain mutiple traits in a *.csv file, and the header is the trait's name. 
 
 
+
 |            | traits |       |      |       |
-|-:--:|-:--:|-:--:|-:--:|:--:|
+|:--:|:--:|:--:|:--:|:--:|
 | **accessions** | GHID   | PH    | PnN  | LA    |
 |            | A1257  | 118.8 | 12.9 | 21.1  |
 |            | A1258  | 125   | 11.8 | 27.6  |
