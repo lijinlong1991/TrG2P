@@ -2,7 +2,7 @@
 
 TrGP is a novel and effective strategy to improve genomic prediction (GP) performance based on transfer learning. Two main functions were designed in this approach, including train.py and predict.py, respectively. Three processes were applied for training, including pretraining, fine-tuning and building fusion models. TrGP aims to get knowledge from the source task's learning system to improve the target GP task.  
 
-
+----------------------------------------
 ## Environment
 This package was builded with the followed packages:
 ```c
@@ -13,17 +13,40 @@ sklearn  0.0.post1
 pandas 1.5.3
 numpy  1.24.2
 ```
+## Data format
+### genotype
+- The genotype file need to contain all makers in a *.txt file, including m accessions and n makers. 
+
+|            | makers |   |   |     |
+|:--:|:--:|:--:|:--:|:--:|
+| **accessions** | 1      | 0 | 0 | -1  |
+|            | 0      | 1 | 1 | 0   |
+|            | -1     | 1 | 0 | -1  |
+
+### phenotype
+- The phenotype file need to contain mutiple traits in a *.csv file, and the header is the trait's name. 
+
+
+|            | traits |       |      |       |
+|-:--:|-:--:|-:--:|-:--:|:--:|
+| **accessions** | GHID   | PH    | PnN  | LA    |
+|            | A1257  | 118.8 | 12.9 | 21.1  |
+|            | A1258  | 125   | 11.8 | 27.6  |
+|            | A1302  | 117.7 | 12.5 | 26    |
+
+
+
 
 ## Parameter list
 ### train.py
 
 | Parameter      | Type           | Default          | Description                                        |
-|----------------|----------------|------------------|----------------------------------------------------|
+|:--:|:--:|:--:|:--:|
 | seed           | int            | 42               | Value of random and cv seeds                       |
 | output              | directory      | None             | Override automatic results directory name          |
 | cv_folds       | int            | 5                | Number of folds to use in cross-validation         |
 | geno           | directory      | ./data/geno.txt  | Training genotype *.txt file (m x n matrix)        |
-| pheno          | directory      | ./data/pheno.csv | Training phenotype *.csv file (m x 1 vector)       |
+| pheno          | directory      | ./data/pheno.csv | Training phenotype *.csv file (m x i vector)       |
 | st             | character, n=2 | None             | Source domain traits, n=2                          |
 | tt             | character, n=1 | None             | Target domain trait, n=1                           |
 | channel        | int            | 1                | The number of out channels in convolutional layer  |
@@ -46,7 +69,7 @@ numpy  1.24.2
 
 ### predict.py
 | Parameter | Type      | Default         | Description                                  |
-|-----------|-----------|-----------------|----------------------------------------------|
+|:--:|:--:|:--:|:--:|
 | output    | directory | None            | Override automatic results directory name    |
 | geno      | directory | ./data/geno.txt | Training genotype *.txt file (m x n matrix)  |
 | model     | directory | None            | Model *.h5 file                              |
@@ -73,4 +96,4 @@ python train.py -s 42 --output results --cv_folds 5 --geno ./data/rice299_geno2.
 python predict.py  --output results  --geno "./data/rice299_geno2.txt"  --model ./results/fine_tuned_model_PH.h5
 ```
 As a result, 1 files will be outputed by predict.py program, 
-- **prediction_res.csv**, The predictive values with known genotype.  
+- **prediction_res.csv**, The predictive values with known genotype.
