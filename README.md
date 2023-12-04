@@ -15,7 +15,7 @@ numpy  1.24.2
 ```
 ## Data format
 ### genotype
-- The genotype file need to contain all makers in a "*.txt" file, including m accessions and n makers. 
+- The genotype file need to contain all markers in a "*.txt" file, including m accessions and n markers. 
 
 |            | mrakers |   |   |     |
 |:--:|:--:|:--:|:--:|:--:|
