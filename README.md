@@ -1,6 +1,6 @@
-# TrGP: A transfer learning based approach to improve genomic prediction
+# TrG2P: A transfer learning based approach to improve genomic prediction
 
-TrGP is a novel strategy to improve genomic prediction (GP) performance based on transfer learning.  TrGP aims to get knowledge from the source task's learning system to improve the target GP task.  Two main functions were designed in this approach, including "train.py" and "predict.py", respectively. Three processes were applied by "train.py" function, including pretraining, fine-tuning and building fusion model. The "predict.py" function  is used to predict genomic estimated breeding values (GEBVs) for new accessions.
+TrG2P is a novel strategy to improve genomic prediction (GP) performance based on transfer learning.  TrGP aims to get knowledge from the source task's learning system to improve the target GP task.  Two main functions were designed in this approach, including "train.py" and "predict.py", respectively. Three processes were applied by "train.py" function, including pretraining, fine-tuning and building fusion model. The "predict.py" function  is used to predict genomic estimated breeding values (GEBVs) for new accessions.
 
 ----------------------------------------
 ## Environment
@@ -9,7 +9,7 @@ This package was builded with the followed packages:
 python 3.9
 tensorflow 2.11.0
 keras 2.11.0
-sklearn  0.0.post1
+scikit-learn 1.0.2
 pandas 1.5.3
 numpy  1.24.2
 ```
@@ -17,7 +17,7 @@ numpy  1.24.2
 ### genotype
 - The genotype file need to contain all makers in a "*.txt" file, including m accessions and n makers. 
 
-|            | makers |   |   |     |
+|            | mrakers |   |   |     |
 |:--:|:--:|:--:|:--:|:--:|
 | **accessions** | 1      | 0 | 0 | -1  |
 |            | 0      | 1 | 1 | 0   |
