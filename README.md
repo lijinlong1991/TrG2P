@@ -17,7 +17,7 @@ numpy  1.24.2
 ### genotype
 - The genotype file need to contain all markers in a "*.txt" file, including m accessions and n markers. 
 
-|            | mrakers |   |   |     |
+|            | markers |   |   |     |
 |:--:|:--:|:--:|:--:|:--:|
 | **accessions** | 1      | 0 | 0 | -1  |
 |            | 0      | 1 | 1 | 0   |
